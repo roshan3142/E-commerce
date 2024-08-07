@@ -37,6 +37,7 @@ exports.getProductById = async (req, res) => {
 
 exports.createProduct = async (req, res) => {
   try {
+    console.log(req.body);
     const newProduct = new Product(req.body);
     await newProduct.save();
     res.status(201).json(newProduct);
