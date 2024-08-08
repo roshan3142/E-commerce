@@ -54,5 +54,4 @@ Navigate to the frontend directory and run:
 npm run client
 
 
-NOTE
 ```
