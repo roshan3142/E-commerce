@@ -32,6 +32,12 @@ Salt is a fully functional e-commerce website built with ReactJS on the frontend
 - `email`: String
 - `address`: String
 
+### Admin Credentials
+
+For testing purposes, an admin user has been created with the following credentials:
+- **Username:** admin
+- **Password:** admin
+
 ## Getting Started
 
 ### Running the Application
