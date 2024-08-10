@@ -41,9 +41,17 @@ function ProductList() {
   };
 
   const handleDelete = async (id) => {
-    await deleteProduct(id);
-    // Refresh the product list after deletion
-    setProducts(products.filter((product) => product._id !== id));
+    try {
+      await deleteProduct(id);
+      setProducts(products.filter((product) => product._id !== id));
+    } catch (err) {
+      console.error("Error deleting product:", err);
+      setError("Failed to delete product. Please try again later.");
+    }
+  };
+
+  const showAlert = () => {
+    alert("Product added to cart!");
   };
 
   if (error) return <div>Error: {error}</div>;
@@ -94,7 +102,10 @@ function ProductList() {
                 )}
                 <button
                   className="btn-add-to-cart"
-                  onClick={() => addToCart(product)}
+                  onClick={() => {
+                    addToCart(product);
+                    showAlert();
+                  }}
                 >
                   Add to Cart
                 </button>

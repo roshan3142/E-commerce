@@ -368,3 +368,13 @@ input[type="email"]:focus {
 .btn-add-to-cart:hover {
   background-color: #e6c200;
 }
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-item {
+  text-align: center;
+}
