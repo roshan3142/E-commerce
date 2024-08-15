@@ -7,7 +7,7 @@ export const getAllProducts = async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    console.log("API response:", data); // Log the API response
+    console.log("API response:", data);
     return data;
   } catch (error) {
     console.error("Error in getAllProducts:", error);
