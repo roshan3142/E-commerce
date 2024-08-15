@@ -32,7 +32,7 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-container" id="admin-login">
       <div className="login-form">
         <h2>Admin Login</h2>
         <form onSubmit={handleSubmit}>
@@ -56,8 +56,11 @@ export default function AdminLogin() {
               required
             />
           </div>
-          <button type="submit">Login</button>
+          <button type="submit" className="btn-login">
+            Login
+          </button>
         </form>
+        {message && <p className="login-message">{message}</p>}
       </div>
     </div>
   );

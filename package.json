@@ -2,5 +2,8 @@
   "scripts": {
     "server": "cd backend && nodemon server.js",
     "client": "cd frontend && npm start"
+  },
+  "dependencies": {
+    "react-toastify": "^10.0.5"
   }
 }

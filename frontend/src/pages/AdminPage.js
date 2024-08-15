@@ -14,12 +14,12 @@ export default function AdminPage() {
     category: "",
   });
   const [isEdit, setIsEdit] = useState(false);
-  const [editId, setEditId] = useState(null);
+  const [setEditId] = useState(null);
 
   useEffect(() => {
     const admin = localStorage.getItem("admin");
     if (!admin) navigate("/admin/login");
-  }, []);
+  }, [navigate]);
 
   const fetchProducts = async () => {
     try {
